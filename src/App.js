@@ -3,6 +3,7 @@ import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 function HomeScreen(props) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -87,6 +88,7 @@ function App() {
         <Stack.Screen name="Contatos" component={ContatosScreen} />
       </Stack.Navigator>
     </NavigationContainer>
+
   );
 }
 
