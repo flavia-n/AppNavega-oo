@@ -1,4 +1,5 @@
 import {View, Text, Button} from "react-native";
+import 'react-native-gesture-handler';
 export default function HomeScreen(props) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
