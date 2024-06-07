@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigation } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Drawer = createDrawerNavigation();
 
 function HomeScreen(props) {
   return (
@@ -77,17 +76,17 @@ function ContatosScreen(props) {
   );
 }
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'> 
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Sobre" component={SobreScreen} />
-        <Stack.Screen name="Produtos" component={ProdutosScreen} />
-        <Stack.Screen name="Contatos" component={ContatosScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName='Home'> 
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Sobre" component={SobreScreen} />
+        <Tab.Screen name="Produtos" component={ProdutosScreen} />
+        <Tab.Screen name="Contatos" component={ContatosScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
 
   );
